@@ -84,8 +84,9 @@ const Display = () => {
               e.preventDefault();
 
               if (document.getElementById('addedit').innerHTML === "add") {
-                setStudent([data, ...student]);
+                setStudent([...student,data]);
                 setData({ Name: "", Batch: "", Sem: "" });
+
               } else {
                 student[index] = data;
                 setStudent([...student]);
